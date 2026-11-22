@@ -55,6 +55,7 @@ pipeline {
                 sh '''
                     ls -a
                     pwd
+                    cd "$WORKSPACE"
                     git config user.email "vshnumenon7@gmail.com"
                     git config user.name "Vishn09"
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
